@@ -1,0 +1,11 @@
+services:
+  web:
+    build: .
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/code
+    environment:
+      FLASK_DEBUG: "false"
+  redis:
+    image: "redis:alpine3.8"
